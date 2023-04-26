@@ -12,7 +12,7 @@ an issue I came across was finding the correct rate to run the program at:
 - so the solution was to essentially "downsample," and remove some of the ticks (depending on the DOWNSAMPLE_RATE variable)
 - i still can't calculate FPS correctly though because I have absolutely no idea how time signature works or if it's even relevant and I also dunno how to calculate it using tempo and ticks_per_beat lol oh whale
 
-demonstration video: [WIP]
+demonstration video: https://youtu.be/Ye_T-lA8hKQ
 
 ## References
 ### Libraries
