@@ -25,7 +25,7 @@ FONT = pygame.font.SysFont(None, 30)
 # audio stuff (fluidsynth): https://github.com/nwhitehead/pyfluidsynth
 TRACK = 0
 fs = fluidsynth.Synth()
-sfid = fs.sfload("Steinway_B.sf2") # https://musical-artifacts.com/artifacts?formats=sf2&tags=piano
+sfid = fs.sfload("Grotrian_Concert_Royal.sf2") # https://musical-artifacts.com/artifacts?formats=sf2&tags=piano
 
 # songs (midi files parsed using mido): https://mido.readthedocs.io/en/latest/
 song1 = mido.MidiFile('./Songs/twinkle-twinkle-little-star.mid', clip=True) # https://bitmidi.com/twinkle-twinkle-little-star-mid
@@ -41,7 +41,7 @@ DOWNSAMPLE_RATE = 2 # reduce number of values in the results_array (values / DOW
 CONSOLE_OUTPUT = False # CHANGE THIS TO OUTPUT THE STATE OF THE NFA IN EACH ITERATION
 SHOW_NOTES = True # CHANGE THIS TO SHOW PIANO NOTES INSTEAD OF q# STATES
 TURN_OFF_Q0 = False # this makes it technically not an NFA but I like it more with this b/c its like q0 is silent state
-ADD_BREAKS = True # for songs that don't have breaks between repeat notes, add them (this causes offset though so not really a solution)
+ADD_BREAKS = True # for songs that don't have breaks between repeat notes, add them (not really a solution; this causes offset - the higher DOWNSAMPLE_RATE is, the more noticeable it is)
 
 # hard coding for showcase (lmao)
 if SONG is song1:
@@ -49,14 +49,14 @@ if SONG is song1:
     DOWNSAMPLE_RATE = 3
     ADD_BREAKS = False
 elif SONG is song2:
-    FPS = SONG.ticks_per_beat * 1.5
-    DOWNSAMPLE_RATE = 2
+    FPS = 240
+    DOWNSAMPLE_RATE = 3
 elif SONG is song3:
     FPS = 200
     DOWNSAMPLE_RATE = 8
 elif SONG is rick:
-    FPS = 240
-    DOWNSAMPLE_RATE = 1
+    FPS = 120
+    DOWNSAMPLE_RATE = 1.8
 
 # list to hold NFA states and info about them
 # each state has:
