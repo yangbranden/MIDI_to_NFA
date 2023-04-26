@@ -6,6 +6,8 @@ Demonstration Video: https://youtu.be/Ye_T-lA8hKQ
 
 hi so I know practically nothing about music theory, so mb if this is inaccurate in a bunch of ways lol
 
+if you want to download and play around with this, make sure that you add the libfluidsynth.dll file into Windows/System32/ so that FluidSynth works properly. 
+
 an issue I came across was finding the correct rate to run the program at:
 - pygame uses clock.tick(#) to set framerate and run the main game loop at a specified rate (I store this framerate value in a variable called FPS)
 - each midi file is made up of messages (notes to play) and meta information, which includes things like tempo and ticks_per_beat (and time signature but idk what to do with that)
