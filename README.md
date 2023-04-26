@@ -2,6 +2,8 @@
 
 This project was completed as an Honors Contract/Extra Credit Project for CSE 355 (Introduction to Theoretical Computer Science).
 
+Demonstration Video: https://youtu.be/Ye_T-lA8hKQ
+
 hi so I know practically nothing about music theory, so mb if this is inaccurate in a bunch of ways lol
 
 an issue I came across was finding the correct rate to run the program at:
@@ -11,8 +13,6 @@ an issue I came across was finding the correct rate to run the program at:
 - I think the problem is that my computer can't handle an FPS of ticks_per_beat (often something like 480) so it lags and then the songs slow down
 - so the solution was to essentially "downsample," and remove some of the ticks (depending on the DOWNSAMPLE_RATE variable)
 - i still can't calculate FPS correctly though because I have absolutely no idea how time signature works or if it's even relevant and I also dunno how to calculate it using tempo and ticks_per_beat lol oh whale
-
-demonstration video: https://youtu.be/Ye_T-lA8hKQ
 
 ## References
 ### Libraries
